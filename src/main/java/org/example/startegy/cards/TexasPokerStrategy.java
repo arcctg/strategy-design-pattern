@@ -11,6 +11,7 @@ public class TexasPokerStrategy implements CardDealingStrategy {
     @Override
     public Map<String, List<Card>> dealStacks(Deck deck, int players) {
         TreeMap<String, List<Card>> treeMap = new TreeMap<>();
+        List<Card> additionalStack = new ArrayList<>();
 
         // Initialize players' cards
         for (int i = 1; i <= players; i++) {
@@ -24,12 +25,11 @@ public class TexasPokerStrategy implements CardDealingStrategy {
             }
         }
 
-        // Deal community cards
-        List<Card> communityCards = new ArrayList<>();
+        // Deal additional stack cards
         for (int i = 0; i < ADD_STACK; i++) {
-            communityCards.add(deck.dealCard());
+            additionalStack.add(deck.dealCard());
         }
-        treeMap.put("Community", communityCards);
+        treeMap.put("Community", additionalStack);
 
         // Handle remaining cards
         if (deck.size() != 0) treeMap.put("Remaining", deck.restCards());
