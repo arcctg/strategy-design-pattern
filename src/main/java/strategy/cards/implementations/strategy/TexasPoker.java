@@ -1,15 +1,21 @@
-package org.example.startegy.cards;
+package strategy.cards.implementations.strategy;
+
+import strategy.cards.implementations.game.DeckOfCards;
+import strategy.cards.interfaces.game.Card;
+import strategy.cards.interfaces.strategy.CardDealingStrategy;
+import strategy.cards.interfaces.game.Deck;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class TexasPokerStrategy implements CardDealingStrategy {
+public class TexasPoker implements CardDealingStrategy {
     private static final int PER_PLAYER = 2;
     private static final int ADD_STACK = 5;
+    private final Deck deck = new DeckOfCards(52);
     @Override
-    public Map<String, List<Card>> dealStacks(Deck deck, int players) {
+    public Map<String, List<Card>> dealStacks(int players) {
         TreeMap<String, List<Card>> treeMap = new TreeMap<>();
         List<Card> additionalStack = new ArrayList<>();
 

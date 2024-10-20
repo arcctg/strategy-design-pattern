@@ -1,4 +1,4 @@
-package org.example.startegy.cards;
+package strategy.cards.interfaces.game;
 
 import java.util.List;
 

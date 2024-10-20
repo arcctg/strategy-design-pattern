@@ -14,7 +14,7 @@ The rest of the card deck becomes a "Remaining" stack.
 
 Note that at first, cards are dealt to players, one per round and then cards are dealt to additional stacks and the remaining deck becomes a "Remaining" stack.
 
-Implement [`org.example.startegy.cards.CardDealingStrategies`](src/main/java/org/example/startegy/cards/CardDealingStrategies.java) methods:
+Implement [`cards.CardDealingStrategies`](src/main/java/org/example/startegy/cards/CardDealingStrategies.java) methods:
 - `texasHoldemCardDealingStrategy` - returns a CardDealingStrategy for Texas Hold'em Poker.
 2 cards per player, 5 cards in additional "Community" stack.
 - `classicPokerCardDealingStrategy` - returns a CardDealingStrategy for Classic Poker.
