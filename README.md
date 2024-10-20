@@ -1,5 +1,5 @@
 # Design Patterns
-The purpose of this exercise is to train thinking with design patterns and to get hands-on experience with them. 
+The purpose of this exercise is to train thinking with design patterns and to get hands-on experience with them. Look at the tests and complete the tasks.
 
 ## Strategy
 **Strategy** is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
