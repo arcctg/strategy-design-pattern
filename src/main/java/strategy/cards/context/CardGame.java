@@ -16,4 +16,8 @@ public class CardGame {
     public Map<String, List<Card>> dealCards(int players) {
         return strategy.dealStacks(players);
     }
+
+    public Map<String, List<Card>> dealCards(String players) {
+        return strategy.dealStacks(Integer.parseInt(players));
+    }
 }

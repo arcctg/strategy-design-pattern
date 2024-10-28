@@ -21,13 +21,12 @@ public class Main {
                 4. Texas Poker
                 """);
 
-        String input = scanner.nextLine().toLowerCase().trim();
+        String input;
 
-        while (!input.matches("1|bridge|2|fool|3|classic poker|4|texas poker")) {
+        while (!(input = scanner.nextLine().toLowerCase().trim())
+                .matches("1|bridge|2|fool|3|classic poker|4|texas poker")) {
             System.out.println("Invalid choice. Try again.");
-            input = scanner.nextLine().toLowerCase().trim();
         }
-
 
         switch (input) {
             case "1", "bridge" -> cardGame.setStrategy(new Bridge());
@@ -38,9 +37,10 @@ public class Main {
 
         System.out.println("\nHow many players are there?");
 
-        while (!scanner.hasNextInt())
+        while (!(input = scanner.next()).matches("\\d") || Integer.parseInt(input) <= 0) {
             System.out.println("Invalid input. Try again.");
+        }
 
-        System.out.println(cardGame.dealCards(scanner.nextInt()).toString());
+        System.out.println(cardGame.dealCards(input).toString());
     }
 }
